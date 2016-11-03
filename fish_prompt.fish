@@ -53,12 +53,12 @@ function __toaster_git_status
   # In git
   if test -n (__toaster_git_branch_name)
 
-    __toaster_color_echo $__toaster_color_blue " git"
-    __toaster_color_echo $__toaster_color_white ":"(__toaster_git_branch_name)
+    __toaster_color_echo $__toaster_color_blue " ☭ "
+    __toaster_color_echo $__toaster_color_white (__toaster_git_branch_name)
 
     if test -n (__toaster_git_status_codes)
       __toaster_color_echo $__toaster_color_pink ' ●'
-      __toaster_color_echo $__toaster_color_white ' [^._.^]ﾉ'
+      __toaster_color_echo $__toaster_color_white ' (^._.^)ﾉ'
       __toaster_git_status_icons
     else
       __toaster_color_echo $__toaster_color_green ' ○'
@@ -68,7 +68,8 @@ end
 
 function fish_prompt
   __toaster_color_echo $__toaster_color_blue "# "
-  __toaster_color_echo $__toaster_color_purple (__toaster_current_folder)
+#  __toaster_color_echo $__toaster_color_purple (__toaster_current_folder)
+  __toaster_color_echo $__toaster_color_purple (prompt_pwd)
   __toaster_git_status
   echo
   __toaster_color_echo $__toaster_color_pink "\$ "
