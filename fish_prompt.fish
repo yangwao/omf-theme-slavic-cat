@@ -67,10 +67,24 @@ function __toaster_git_status
 end
 
 function fish_prompt
-  __toaster_color_echo $__toaster_color_blue "# "
-#  __toaster_color_echo $__toaster_color_purple (__toaster_current_folder)
+  __toaster_color_echo $__toaster_color_blue ""
+  printf '['
+  switch $fish_bind_mode
+    case default
+      set_color --bold red
+      printf 'n'
+    case insert
+      set_color --bold green
+      printf 'i'
+    case visual
+      set_color --bold magenta
+      printf 'v'
+  end
+  set_color normal
+  printf '] '
   __toaster_color_echo $__toaster_color_purple (prompt_pwd)
   __toaster_git_status
+
   echo
-  __toaster_color_echo $__toaster_color_pink "\$ "
+  __toaster_color_echo $__toaster_color_pink "⫸  "
 end
