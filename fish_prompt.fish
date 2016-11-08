@@ -69,17 +69,17 @@ function __slavic_git_status
 end
 
 function fish_prompt
-  set_color --bold $__slavic_color_lilac
+  set_color $__slavic_color_lilac
   printf '['
   switch $fish_bind_mode
     case default
-      set_color --bold red
+      set_color red
       printf 'n'
     case insert
-      set_color --bold green
+      set_color green
       printf 'i'
     case visual
-      set_color --bold magenta
+      set_color magenta
       printf 'v'
   end
   set_color $__slavic_color_lilac
