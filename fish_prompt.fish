@@ -69,7 +69,7 @@ function __slavic_git_status
 end
 
 function fish_prompt
-  __slavic_color_echo $__slavic_color_blue ""
+  set_color --bold $__slavic_color_lilac
   printf '['
   switch $fish_bind_mode
     case default
@@ -82,7 +82,7 @@ function fish_prompt
       set_color --bold magenta
       printf 'v'
   end
-  set_color normal
+  set_color $__slavic_color_lilac
   printf '] '
   __slavic_color_echo $__slavic_color_purple (prompt_pwd)
   __slavic_git_status
