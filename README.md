@@ -12,9 +12,9 @@ A fish (shell) theme with a Slavic cat and a rainbow that signifies git status.
 ## Instalation
 
 #### Requirements
-* [Fish shell][fish] - a smart and user-friendly command line
+* [Fish shell](https://github.com/fish-shell/fish-shell) - a smart and user-friendly command line
 shell for OS X, Linux, and the rest of the family
-* [Oh My Fish][omf] - The Fishshell Framework
+* [Oh My Fish](https://github.com/oh-my-fish/oh-my-fish) - The Fishshell Framework
 
 Once Oh My Fish is installed:
 
