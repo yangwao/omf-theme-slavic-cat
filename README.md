@@ -24,8 +24,10 @@ Once Oh My Fish is installed:
 
 ## Features
 
- * Minimal look
+ * Minimal Look & Prompt
+ * Current short version pwd
  * Display branch for Git projects
  * Git project dirty status indicator *meow* **(R,C,A,U,M,?)** *meow*
  * Fish shell vi mode indicator
  * Next line prompt
+ * Two unicodes included!
