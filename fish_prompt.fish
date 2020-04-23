@@ -68,7 +68,7 @@ function __slavic_git_status
   end
 end
 
-function fish_prompt
+function fish_mode_prompt
   set_color $__slavic_color_lilac
   printf '['
   switch $fish_bind_mode
@@ -84,6 +84,9 @@ function fish_prompt
   end
   set_color $__slavic_color_lilac
   printf '] '
+end
+
+function fish_prompt
   __slavic_color_echo $__slavic_color_purple (prompt_pwd)
   __slavic_git_status
 
